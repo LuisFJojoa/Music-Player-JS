@@ -1,0 +1,125 @@
+:root {
+  --black-red-c1: #630017;
+  --black-red-c2: #ce001e;
+  --black-red-c3: #e0e0e0;
+  --black-red-c4: #2d2d30;
+  --black-red-c5: #161616;
+  --black-red-c5-A: #0d0d0df0;
+  --slider-name: "typing-slider";
+  --slides: 3;
+  --animation-delay: 5s;
+  --tab-letters: 20 22 23; /*number of characters in each paragraph*/
+  --slider-font-size: 3rem;
+  --border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /*outline: dashed rgba(255,0,0,0.5);*/
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  height: 100vh;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  background: var(--black-red-c4);
+}
+
+.background_video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: var(--black-red-c5-A);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  z-index: 3;
+}
+
+.home-content h1 {
+  font-family: Playfair Display, serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 70px;
+  line-height: 1.1;
+}
+
+.typed-out-1 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing .5s linear forwards;
+}
+
+.typed-out-2 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing .5s linear forwards;
+  animation-delay: .5s;
+}
+
+.typed-out-3 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing .5s linear forwards;
+  animation-delay: 1s;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.home-content h2 {
+  margin-top: 20px;
+  font-family: Playfair Display, serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+#artist {
+  width: 50%;
+  margin-top: 130px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid orange;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+#artist:focus {
+  outline: none;
+}
